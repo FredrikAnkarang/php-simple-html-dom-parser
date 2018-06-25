@@ -67,7 +67,7 @@ define('DEFAULT_BR_TEXT', "\r\n");
 define('DEFAULT_SPAN_TEXT', " ");
 if (!defined('MAX_FILE_SIZE'))
 {
-    define('MAX_FILE_SIZE', 600000);
+    define('MAX_FILE_SIZE', 1000000);
 }
 // helper functions
 // -----------------------------------------------------------------------------
@@ -705,7 +705,7 @@ class simple_html_dom_node
             $m[0] = trim($m[0]);
             if ($m[0]==='' || $m[0]==='/' || $m[0]==='//') continue;
             // for browser generated xpath
-            if ($m[1]==='tbody') continue;
+            //if ($m[1]==='tbody') continue;
 
             list($tag, $key, $val, $exp, $no_key) = array($m[1], null, null, '=', false);
             if (!empty($m[2])) {$key='id'; $val=$m[2];}
